@@ -11,3 +11,29 @@
 @mixin transition($properties...) {
     transition: $properties variables.$transition-duration ease-in-out;
 }
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==small {
+        @media (max-width: 37.5rem) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==medium {
+        @media (max-width: 56.25rem) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==large {
+        @media (max-width: 75rem) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==custom-64 {
+        @media (max-width: 64rem) {
+            @content;
+        }
+    }
+}
