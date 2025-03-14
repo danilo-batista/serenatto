@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../utils/functions';
 @use '../utils/mixins';
 
 .navbar {
@@ -99,7 +100,8 @@
 
     background-color: variables.$secondary-color;
     transform: translateX(100%);
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+
+    box-shadow: functions.custom-box-shadow(0.625rem, rgba(0, 0, 0, 0.2));
 
     &.open {
         transform: translateX(0);
@@ -168,7 +170,7 @@ body.sidebar-open .navbar-brand img {
 
         .slider {
             @include mixins.transition(transform);
-            
+
             position: absolute;
 
             margin: 0.125rem;

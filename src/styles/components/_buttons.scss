@@ -1,10 +1,11 @@
 @use '../base/variables';
+@use '../utils/functions';
 @use '../utils/mixins';
 @use 'sass:color';
 
 .btn {
     @include mixins.transition(background-color);
-    
+
     width: 100%;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
@@ -27,6 +28,6 @@
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 0.2rem rgba(variables.$primary-color, 0.5);
+        box-shadow: functions.custom-box-shadow(0.2rem, rgba(variables.$primary-color, 0.5));
     }
 }

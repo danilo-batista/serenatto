@@ -1,5 +1,5 @@
 @use '../base/variables';
-
+@use '../utils/functions';
 @use '../utils/mixins';
 
 .card {
@@ -13,7 +13,7 @@
     border-radius: variables.$border-radius;
 
     &:hover {
-        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+        box-shadow: functions.custom-box-shadow(0.75rem, rgba(0, 0, 0, 0.2));
     }
 
     img {
@@ -59,7 +59,7 @@
     text-align: center;
 
     &:hover {
-        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+        box-shadow: functions.custom-box-shadow(0.75rem, rgba(0, 0, 0, 0.2));
     }
 
     img {

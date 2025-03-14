@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../utils/functions';
 @use "../utils/mixins";
 
 .modal {
@@ -19,7 +20,7 @@
     background: variables.$modal-bg;
     border: 1px solid #00000033;
     border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    box-shadow: functions.custom-box-shadow(0.375rem, rgba(0, 0, 0, 0.1));
 
     &.open {
         display: block;

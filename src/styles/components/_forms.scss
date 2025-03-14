@@ -1,4 +1,5 @@
 @use '../base/variables';
+@use '../utils/functions';
 @use '../utils/mixins';
 
 input,
@@ -22,7 +23,7 @@ select {
     &:focus {
         border-color: variables.$accent-color;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(variables.$accent-color, 0.25);
+        box-shadow: functions.custom-box-shadow(0.2rem, rgba(variables.$accent-color, 0.25));
     }
 }
 
