@@ -26,7 +26,7 @@
     }
 
     .modal-content {
-        @include mixins.flexbox($flex-direction: column);
+        @include mixins.flexbox($align-items: none, $flex-direction: column);
 
         max-height: 80vh;
         overflow-y: auto;
@@ -56,7 +56,7 @@
         }
 
         .modal-body {
-            @include mixins.flexbox($flex-direction: colum);
+            @include mixins.flexbox($flex-direction: column);
 
             img {
                 max-height: 20rem;

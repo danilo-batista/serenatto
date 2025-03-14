@@ -2,9 +2,11 @@
 @use 'base/variables';
 @use 'base/global';
 
+@use 'utils/dark-mode';
 @use 'utils/mixins';
 
 @use 'layouts/header';
+@use 'layouts/footer';
 
 @use 'pages/home';
 
