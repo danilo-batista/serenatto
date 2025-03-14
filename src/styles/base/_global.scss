@@ -1,0 +1,21 @@
+@use 'variables';
+@use '../utils/mixins';
+
+body {
+    font-family: variables.$font-family-primary;
+    line-height: 1.6;
+
+    color: variables.$primary-color;
+    background-color: variables.$secondary-color;
+
+    a {
+        @include mixins.transition(color);
+
+        color: variables.$primary-color;
+        text-decoration: none;
+
+        &:hover {
+            color: variables.$accent-color;
+        }
+    }
+}

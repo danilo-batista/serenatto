@@ -1,0 +1,143 @@
+@use '../base/variables';
+@use '../utils/mixins';
+
+.banner {
+    @include mixins.flexbox($align-items: start, $flex-direction: column);
+
+    padding: 2rem;
+
+    background-size: cover;
+    background-position: center;
+    color: variables.$secondary-color;
+
+    &.banner-1 {
+        background-image: url('/src/assets/banner-1.png');
+
+        .banner-content-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        h2 {
+            margin: 2rem 0;
+
+            font-weight: 400;
+            text-align: left;
+            color: variables.$heading-color;
+        }
+
+        p {
+            margin-bottom: variables.$margin-botton-regular;
+
+            font-size: 1.25rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+    }
+
+    &.banner-2 {
+        @include mixins.flexbox($flex-direction: column);
+
+        min-height: 25rem;
+        background-image: url('/src/assets/banner-2.png');
+
+        h2 {
+            margin: 2rem 0;
+
+            font-size: 4rem;
+            font-weight: 400;
+            text-align: center;
+
+            color: variables.$heading-color;
+        }
+
+        p {
+            margin-bottom: variables.$margin-botton-regular;
+
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+            text-align: center;
+        }
+    }
+}
+
+.banner-content {
+    grid-column: 2 / 4;
+    align-content: start;
+
+    h2 {
+        margin: 2rem 0;
+
+        font-size: 5.75rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 5.84rem;
+
+        color: variables.$heading-color;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    p {
+        margin-bottom: variables.$margin-botton-regular;
+
+        font-size: 1.25rem;
+        line-height: 1.6;
+
+        text-align: left;
+    }
+}
+
+.banner-3 {
+    max-width: 100%;
+}
+
+.services {
+    padding: 6rem 0;
+
+    h2 {
+        margin-bottom: 2rem;
+
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+
+        color: variables.$subheading-color;
+    }
+
+    .services-container {
+        @include mixins.flexbox();
+        
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 0 5rem;
+    }
+}
+
+.products {
+    padding: 2rem;
+
+    h2 {
+        margin: 4rem auto;
+
+        font-size: 2.5rem;
+        text-align: center;
+
+        color: variables.$subheading-color;
+    }
+
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 4rem;
+
+        margin: 4rem auto;
+        padding: 0 2rem;
+    }
+}
