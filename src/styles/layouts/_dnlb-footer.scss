@@ -1,0 +1,29 @@
+@use "../base/variables";
+@use "../utils/mixins";
+
+/* Brand Footer */
+.dnlb__footer {
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    padding: 1rem;
+
+    background-color: #7B7574;
+    color: white;
+
+    position: sticky;
+    bottom: 0;
+}
+
+.dnlb__footer--copyright {
+    text-align: center;
+}
+
+.dnlb__footer--copyright span {
+    font-weight: 600;
+}
+
+.dnlb__footer--copyright a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
